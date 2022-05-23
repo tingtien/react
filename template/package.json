@@ -4,27 +4,29 @@
     "description": "{{description}}",
     "main": "index.js",
     "_mitan": true,
-    "_mitanType": "nodeReact",
+    "_mitanType": "react",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "creator": "{{author}}",
     "license": "ISC",
     "dependencies": {
-        "mitan-node": "^3.2.9"
+        "@fm/fmia": "0.3.1-beta.5",
+        "@fm/mobile": "4.4.14",
+        "mitan-node": "3.5.11"
     },
     "devDependencies": {
-        "mitan-react-release": "^3.3.10"
+        "mitan-react-release": "4.0.5"
     },
     "husky": {
         "hooks": {
-          "pre-commit": "lint-staged"
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
         "*.js": [
-          "fm start --fix",
-          "git add"
+            "fm start --fix",
+            "git add"
         ]
     }
 }
